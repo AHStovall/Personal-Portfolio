@@ -1,6 +1,7 @@
 * {
     background-color: #5cdb95;
     color: #EDF5E1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 :root{
@@ -14,8 +15,6 @@ header{
     background:var(--darkheader);   
     width: 100%;
     color:var(--text);
-   
-    
 }
 
 h1#Name{
@@ -28,8 +27,9 @@ nav{
     background-color: var(--darkheader);
     display:flex;
     flex-wrap:wrap;
-    flex:0 0 200px;
+    flex:1 0 auto;
     justify-content: flex-end; 
+    
 }
 
 nav a{
@@ -59,9 +59,12 @@ a.links{
     font-size: 25px;
 }
 
+
+
 Section#About{
-    width:90%;
+    width:100%;
     background-color: var(--section);
+    align-items:center;
 }
 
 #About p, h2{
@@ -72,6 +75,7 @@ Section#About{
     padding:5px;
     margin: 20px;
     border:#379683 solid 10px;
+    align-items:center;
 }
 
 #Work{
@@ -81,18 +85,69 @@ Section#About{
     display:flex;
     flex-wrap:wrap;
     margin: 0 auto;
-    gap: 30px 30px
+    gap: 30px 30px;
     }
 
-#Work #Horiseon{
-    margin: 0 auto;
-    flex: 1 1 200px;
+#Horiseon{
+    position:relative;
+    align-items: center;
+    left: 450px;
 }
 
 #Work img{
-    /* transform: scale(1.); */
+    display:flex;
+    flex-wrap:wrap;
+    transform:scale(.9);
 }
 
-footer section form ul li {
-    background-color: var(--darkheader);
+.sitecards img{
+    vertical-align: bottom;
+    flex-direction: column;
 }
+
+input[type=text], select, textarea {
+    width: 25%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    background-color: var(--text);
+}
+
+footer{
+    width:100%;
+    padding:10px;
+    background-color: #05386B;
+}
+
+input[type=submit]{
+    background-color: var(--section);
+}
+
+h4{
+    background-color: var(--darkheader);
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+.container, form, label, input{
+    background-color: var(--darkheader);
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+      flex:1 0 auto;
+    }
+    nav a{
+        flex:1 0 auto;
+    }
+  }
