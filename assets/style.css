@@ -10,7 +10,7 @@
 }
 
 header{
-    padding:40px;
+    padding: 10px;
     background:var(--darkheader);   
     width: 100%;
     color:var(--text);
@@ -27,15 +27,19 @@ h1#Name{
 nav{
     background-color: var(--darkheader);
     display:flex;
+    flex-wrap:wrap;
+    flex:0 0 200px;
+    justify-content: flex-end; 
 }
 
 nav a{
-    
     color:var(--text);
     list-style:none;
     background:var(--section);
-    
-    
+    border: var(--text) 2px solid;
+    display: flex;
+    align-items: center;
+    margin: 10px;
 }
 
 a{
@@ -55,25 +59,40 @@ a.links{
     font-size: 25px;
 }
 
-
-
 Section#About{
     width:90%;
     background-color: var(--section);
 }
 
-#About{
-text-align: center;
-margin:auto;
+#About p, h2{
+    display:flex;
+    text-align: center;
+    margin:auto;
+    background: var(--section);
+    padding:5px;
+    margin: 20px;
+    border:#379683 solid 10px;
 }
 
 #Work{
     text-align: center;
-    margin:auto;
+    align-items: center;
+    justify-content: space-around;
+    display:flex;
+    flex-wrap:wrap;
+    margin: 0 auto;
+    gap: 30px 30px
     }
 
-img{
-    text-align: center;
-    margin:auto;
-    display:block;
+#Work #Horiseon{
+    margin: 0 auto;
+    flex: 1 1 200px;
+}
+
+#Work img{
+    /* transform: scale(1.); */
+}
+
+footer section form ul li {
+    background-color: var(--darkheader);
 }
